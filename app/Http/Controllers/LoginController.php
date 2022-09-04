@@ -24,7 +24,7 @@ class LoginController extends Controller
     	$check = login::where('name','=',$name)->where('mobile','=',$mobile)->get();      
     	//dd($check);
 
-    	if(count($check) == 1){
+    	if(count($check) == 1){       //first condition
     		return 'login successful';
     	}else{
     		return 'not matched credentials';
